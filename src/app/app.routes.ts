@@ -5,7 +5,8 @@ import { CustomerLayoutComponent } from './shared/layouts/customer-layout/custom
 export const routes: Routes = [
     {
         path: 'manager',
-        component: ManagerLayoutComponent
+        component: ManagerLayoutComponent,
+        loadChildren: () => import('./manager/manager.module').then(m => m.ManagerModule)
     },
     {
         path: '',
